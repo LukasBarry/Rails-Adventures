@@ -1,0 +1,16 @@
+<style>
+  body {
+    color: <%= @color %>;
+  }
+  </style>
+<h1>About</h1>
+<p>We are here to help you decide where you'd like to travel!</p>
+<h2>States</h2>
+<p>We will go over the states, what their capital is, and what their population is</p>
+<h2>Activities</h2>
+<p>Then we will review what activities are available in those states, so you can better decide on your vacation destination. Sounds exciting.</p>
+
+<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
+<%= link_to "Red", about_path(color: "red"), class: "btn btn-danger" %>
+<%= link_to "Green", about_path(color: "green"), class: "btn btn-success" %>
+<%= link_to "Grey", about_path(color: "grey"), class: "btn btn-default" %>

@@ -1,0 +1,12 @@
+<h1>Adventure!</h1>
+<p>Doesn't that sound exciting?</p>
+<h2>States</h2>
+<h2>Activities</h2>
+
+<ul>
+<% @slideshow.shuffle.each do |pic| %>
+  <p>
+  <%= image_tag pic, class: "img-responsive" %>
+  <% end %>
+  </p>
+</ul>
