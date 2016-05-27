@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411153133) do
-
-  create_table "activities", force: :cascade do |t|
-    t.string   "name"
-    t.decimal  "cost"
-    t.string   "duration"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20160411153028) do
 
   create_table "states", force: :cascade do |t|
     t.string   "name"
