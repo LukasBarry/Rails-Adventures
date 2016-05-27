@@ -1,31 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Destinations</h1>
+<h1>Destinations</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>City</th>
-      <th>Country</th>
-      <th>Desription</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="panel panel-default">
     <% @destinations.each do |destination| %>
-      <tr>
-        <td><%= destination.city %></td>
-        <td><%= destination.country %></td>
-        <td><%= destination.desription %></td>
-        <td><%= link_to 'Show', destination %></td>
-        <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
-        <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="panel-heading">
+        <h2><%= destination.city %></h2>
+      </div>
+      <div class="panel-body">
+        <p>Country: <%= destination.country %></p>
+        <p>Description: <%= destination.desription %></p>
+        <%= link_to 'Show', destination, class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_destination_path(destination), class: "btn btn-primary" %>
+        <%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+</div>
 
 <br>
 
-<%= link_to 'New Destination', new_destination_path %>
+<%= link_to 'New Destination', new_destination_path, class: "btn btn-primary btn-lg" %>
